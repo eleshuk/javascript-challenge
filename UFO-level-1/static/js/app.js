@@ -1,9 +1,6 @@
 // from data.js
 var tableData = data;
 
-
-// YOUR CODE HERE!
-
 // Variables
 // datetime, city, state, country, shape, durationMinutes, comments
 console.log(data);
@@ -12,8 +9,10 @@ console.log(data);
 
 d3.select("table").attr("class", "table table-striped");
 
+// Function to create table from data
 function createTable(data) {
     var tbody = d3.select("tbody");
+    // Reset table
     tbody.html("");
     data.forEach(function(UFO) {
         console.log(UFO);
@@ -29,6 +28,7 @@ function createTable(data) {
 };
 createTable(tableData);
 
+// Create button
 var button = d3.select("#filter-btn");
 // Select the form
 var inputField = d3.select("#form");
@@ -38,9 +38,7 @@ button.on("click", runEnter);
 inputField.on("submit",runEnter);
 
 
-// Use a date form in your HTML document and write JavaScript code that will listen for events and search through the date/time column to find rows that match user input.
-// Select the button
-
+// Use a date form in your HTML document and write JavaScript code that will listen for events and search through the date/time column to find rows that match user input
 
 // Complete the event handler function for the form
 function runEnter() {
