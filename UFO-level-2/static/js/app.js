@@ -65,34 +65,34 @@ function runEnter() {
 
 
 // Loop through the data and append data to the table body
-tableData.forEach(data => {
-    // console.log(data);
-     var row = tableBody.append("tr");
-     Object.entries(data).forEach(([key, value]) =>{
-      //console.log(key, value);
-       row.append("td").text(value);
-     })
- })
- console.log(tableData);
- var allkeys = Object.keys(tableData[0]);
- var all_values = {};
- dates = [];
- cities= [];
- countries = [];
- states = [];
- shapes = [];
- for(i=0;i<tableData.length;i++){
-     if(!dates.includes(tableData[i].datetime)){dates.push(tableData[i].datetime);}
-     if(!cities.includes(tableData[i].city)){cities.push(tableData[i].city);}
-     if(!states.includes(tableData[i].state)){states.push(tableData[i].state);}
-     if(!countries.includes(tableData[i].country)){countries.push(tableData[i].country);}
-     if(!shapes.includes(tableData[i].shape)){shapes.push(tableData[i].shape);}
- }
- console.log(shapes);
- filters = d3.select("#filters");
- var li = filters.append("li");
- li.append("label").attr("for", "city").text();
- cities.forEach(x=>{
-   li.append("input").attr("type", "radio").attr("id", "city").attr("value", x);
-   li.append("label").text(x);
- })
+// tableData.forEach(data => {
+//     // console.log(data);
+//      var row = tableBody.append("tr");
+//      Object.entries(data).forEach(([key, value]) =>{
+//       //console.log(key, value);
+//        row.append("td").text(value);
+//      })
+//  })
+//  console.log(tableData);
+//  var allkeys = Object.keys(tableData[0]);
+//  var all_values = {};
+//  dates = [];
+//  cities= [];
+//  countries = [];
+//  states = [];
+//  shapes = [];
+//  for(i=0;i<tableData.length;i++){
+//      if(!dates.includes(tableData[i].datetime)){dates.push(tableData[i].datetime);}
+//      if(!cities.includes(tableData[i].city)){cities.push(tableData[i].city);}
+//      if(!states.includes(tableData[i].state)){states.push(tableData[i].state);}
+//      if(!countries.includes(tableData[i].country)){countries.push(tableData[i].country);}
+//      if(!shapes.includes(tableData[i].shape)){shapes.push(tableData[i].shape);}
+//  }
+//  console.log(shapes);
+//  filters = d3.select("#filters");
+//  var li = filters.append("li");
+//  li.append("label").attr("for", "city").text();
+//  cities.forEach(x=>{
+//    li.append("input").attr("type", "radio").attr("id", "city").attr("value", x);
+//    li.append("label").text(x);
+//  })
